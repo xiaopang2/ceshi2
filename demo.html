@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+console.log(document.body===document.querySelect('body'))
+console.log(document.body.nodeType)
+<input type='ra'>
+<script>
+    console.log(document.body===document.querySelector('body'))
+    console.log(document.body.nodeType)
+    var obj={name:'aaa',age:'111',eat:function () {
+            
+        }}
+   console.log(obj);
+    obj.__proto__.fun=function () {
+        console.log('aaa')
+    }
+    obj.__proto__.sex='女'
+    for(var key  in obj){
+        console.log(obj[key])
+    }
+</script>
+</body>
+</html>

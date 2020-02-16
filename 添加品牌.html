@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .fu {
+            position: relative;
+            width: 162px;
+            height:125px;
+            display: none;
+        }
+        a {
+            text-decoration: none;
+            position: absolute;
+            right:0;
+            bottom:10px;
+        }
+    </style>
+</head>
+<body>
+<h3>+</h3>
+<div class="fu" >
+    <h1>添加品牌</h1>
+    <input type="text" placeholder="请输入品牌名称">
+    <a href="#">确定</a>
+</div>
+<script>
+    let fu=document.getElementsByClassName('fu')[0]
+document.querySelector('h3').addEventListener('click',function (e) {
+    fu.style.display='block'
+})
+    document.querySelector('a').addEventListener('click',function (e) {
+        fu.style.display='none'
+    })
+    document.getElementsByClassName('fu')[0].addEventListener('click',function (e) {
+        if(e.target.tagName!='input'){
+            fu.style.display='none'
+        }
+        console.log(e.target)
+    })
+</script>
+</body>
+</html>

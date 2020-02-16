@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .fu {
+            position: relative;
+        }
+        .fu>div{
+            background-color: red;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            z-index: 2;
+        }
+        .zi {
+            background-color: black!important;
+        }
+        input {
+
+            margin: 400px;
+        }
+    </style>
+</head>
+<body>
+<div class="fu">
+    <div class="zi"></div>
+    <div ></div>
+</div>
+<input type="button" value="点击">
+<script>
+    document.getElementsByTagName('input')[0].onclick=function(){
+        console.log('kaishile ');
+        document.getElementsByClassName('zi')[0].style.zIndex='-1';
+        console.log( document.getElementsByClassName('zi')[0].style.zIndex)
+    }
+</script>
+</body>
+</html>
